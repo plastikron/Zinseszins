@@ -1,0 +1,40 @@
+﻿<Window x:Class="WPFZinsesZins.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPFZinsesZins"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"></ColumnDefinition>
+            <ColumnDefinition Width="1*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Label x:Name="l_Kapital" Grid.Row="0" Grid.Column="0" Content="Anfangskapital"></Label>
+        <Label x:Name="l_Zinsfuss" Grid.Row="1" Grid.Column="0" Content="Zinsfuss"></Label>
+        <Label x:Name="l_Laufzeit" Grid.Row="2" Grid.Column="0" Content="Laufzeit"></Label>
+        <Label x:Name="l_Endkapital" Grid.Row="4" Grid.Column="0" Content="Endkapital"></Label>
+        <Label x:Name="l_Gewinn" Grid.Row="5" Grid.Column="0" Content="Gewinn"></Label>
+        <Label x:Name="l_GewinnProzent" Grid.Row="6" Grid.Column="0" Content="Gewinn in Prozent"></Label>
+        
+
+        <TextBox x:Name="t_Kapitalwert" Grid.Row="0" Grid.Column="1" Text="{Binding Path=A_kapital}"></TextBox>
+        <TextBox x:Name="t_Zinsfusswert" Grid.Row="1" Grid.Column="1" Text="{Binding Path=Zins}"></TextBox>
+        <TextBox x:Name="t_Laufzeitwert" Grid.Row="2" Grid.Column="1" Text="{Binding Path=Jahre}"></TextBox>
+        <TextBox x:Name="t_Endkapitalwert" Grid.Row="4" Grid.Column="1" Text="{Binding Path=E_kapital, Mode=OneWay}"/>
+        <TextBox x:Name="t_Gewinn" Grid.Row="5" Grid.Column="1" Text="{Binding Path=Gewinn, Mode=OneWay}"/>
+        <TextBox x:Name="t_GewinnProzent" Grid.Row="6" Grid.Column="1" Text="{Binding Path=Prozent, Mode=OneWay}"/>
+        <Button x:Name="b_Berechnen" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" Content="Berechnen" Click="b_Berechnen_Click"></Button>
+
+    </Grid>
+</Window>
